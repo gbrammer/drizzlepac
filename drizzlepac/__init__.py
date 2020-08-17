@@ -20,59 +20,59 @@ from .version import *
 
 from . import ablot
 from . import adrizzle
-from . import astrodrizzle
-from . import buildmask
-from . import createMedian
-from . import drizCR
-from . import imageObject
-from . import mapreg
-from . import mdzhandler
-from . import outputimage
-from . import photeq
-from . import processInput
-from . import resetbits
-from . import sky
-from . import staticMask
-from . import util
-from . import wcs_functions
+# from . import astrodrizzle
+# from . import buildmask
+# from . import createMedian
+# from . import drizCR
+# from . import imageObject
+# from . import mapreg
+# from . import mdzhandler
+# from . import outputimage
+# from . import photeq
+# from . import processInput
+# from . import resetbits
+# from . import sky
+# from . import staticMask
+# from . import util
+# from . import wcs_functions
 
 
 # These modules provide the user-interfaces to coordinate transformation tasks
-from . import pixtosky
-from . import skytopix
-from . import pixtopix
+# from . import pixtosky
+# from . import skytopix
+# from . import pixtopix
 
 # The following modules are for 'tweakreg' and are included here to make
 # it easier to get to this code interactively
-try:
-    from . import tweakreg, catalogs, imgclasses, tweakutils, mapreg, photeq, \
-                  imagefindpars, refimagefindpars
-except ImportError as e :
-    print('The libraries needed for "tweakreg" were not available!')
-    print('None of the code related to that task can be used at this time.')
-    print('   (If you want to report this error, the details are "%s")'%(str(e)))
-
-# Add updatenpol to the list of tasks imported automatically here
-from . import updatenpol
-from . import buildwcs
-
-# This module supports applying WCS from _drz to _flt files
-from . import tweakback
-
-# This module enables users to replace NaNs in images with another value easily
-from . import pixreplace
-
-from . import haputils
-from . import align
-from . import runastrodriz
-
-# These lines allow TEAL to print out the names of TEAL-enabled tasks
-# upon importing this package.
-from stsci.tools import teal
-
-
-teal.print_tasknames(__name__, os.path.dirname(__file__),
-                     hidden=['adrizzle','ablot','buildwcs'])
+# try:
+#     from . import tweakreg, catalogs, imgclasses, tweakutils, mapreg, photeq, \
+#                   imagefindpars, refimagefindpars
+# except ImportError as e :
+#     print('The libraries needed for "tweakreg" were not available!')
+#     print('None of the code related to that task can be used at this time.')
+#     print('   (If you want to report this error, the details are "%s")'%(str(e)))
+# 
+# # Add updatenpol to the list of tasks imported automatically here
+# from . import updatenpol
+# from . import buildwcs
+# 
+# # This module supports applying WCS from _drz to _flt files
+# from . import tweakback
+# 
+# # This module enables users to replace NaNs in images with another value easily
+# from . import pixreplace
+# 
+# from . import haputils
+# from . import align
+# from . import runastrodriz
+# 
+# # These lines allow TEAL to print out the names of TEAL-enabled tasks
+# # upon importing this package.
+# from stsci.tools import teal
+# 
+# 
+# teal.print_tasknames(__name__, os.path.dirname(__file__),
+#                      hidden=['adrizzle','ablot','buildwcs'])
 
 
 def help():
